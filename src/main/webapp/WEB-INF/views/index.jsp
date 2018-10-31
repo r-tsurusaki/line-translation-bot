@@ -6,4 +6,4 @@
 <title>Spring MVC 入門</title>
 </head>
 <body>
-<h1>Hello Spring MVC!!</h1> </body>
+<h1>${textStr}</h1> </body>
