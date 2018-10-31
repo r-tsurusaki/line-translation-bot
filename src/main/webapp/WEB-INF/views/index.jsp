@@ -8,5 +8,6 @@
 <title>Spring MVC 入門</title>
 </head>
 <body>
+	<!-- controllerで設定されたtextStrの値を表示する -->
 	<h1>${textStr}</h1>
 </body>
