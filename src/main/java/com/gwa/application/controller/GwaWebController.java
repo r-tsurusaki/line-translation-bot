@@ -2,8 +2,9 @@ package com.gwa.application.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.gwa.domain.service.IndexService;
 
@@ -25,8 +26,8 @@ public class GwaWebController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping("/")
-	public String index(Model model) {
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public ModelAndView index(ModelAndView modelAndView) {
 
 		// Serviceクラスを呼び出す処理
 		// 固定文言を返却する
@@ -34,9 +35,11 @@ public class GwaWebController {
 
 		// jspの変数に設定する値を設定<br>
 		// 以下の例ではjsp内のtextStrという変数にserviceResltの値をセットする
-		model.addAttribute("textStr", serviceReslt);
+		modelAndView.addObject("textStr", serviceReslt);
+
+		modelAndView.setViewName("index");
 
 		// src/main/webapp/WEB-INF/views配下のreturnに指定したファイル名のjspが表示される。
-		return "index";
+		return modelAndView;
 	}
 }
