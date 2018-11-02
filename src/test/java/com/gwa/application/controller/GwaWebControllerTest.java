@@ -72,4 +72,23 @@ class GwaWebControllerTest {
 				// 実行結果のattribute_value:"textStr"が、変数textStrの値に等しいこと
 				.andExpect(model().attribute("textStr", textStr));
 	}
+
+	@Test
+	public void notFoundTest() throws Exception {
+
+		// attribute_valueの期待値
+		String textStr = "Hello Spring MVC!!";
+
+		// mockの作成
+		// 以下の例では、indexServiceのtest()メソッドが呼び出された場合、textStrの値を返却する
+		when(this.indexService.test()).thenReturn(textStr);
+
+		// mockMvcでのテスト実行
+		// 条件が満たされない場合、テストNGでエラーとなる
+		this.mockMvc
+				// Getで"/404"が実行された場合
+				.perform(MockMvcRequestBuilders.get("/404"))
+				// 実行結果のHTTPステータスコードが404であること
+				.andExpect(status().isNotFound());
+	}
 }
