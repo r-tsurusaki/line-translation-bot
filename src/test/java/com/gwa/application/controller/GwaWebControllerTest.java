@@ -1,9 +1,7 @@
 package com.gwa.application.controller;
 
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+import static org.mockito.Mockito.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import org.junit.Rule;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,6 +17,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
 import com.gwa.domain.service.IndexService;
 
 /**
@@ -63,8 +62,8 @@ class GwaWebControllerTest {
 		// mockMvcでのテスト実行
 		// 条件が満たされない場合、テストNGでエラーとなる
 		this.mockMvc
-				// Getで"/"が実行された場合
-				.perform(MockMvcRequestBuilders.get("/"))
+				// Postで"/"が呼ばれた場合
+				.perform(MockMvcRequestBuilders.post("/"))
 				// 実行結果のHTTPステータスコードがOK(200)であること
 				.andExpect(status().isOk())
 				// 実行後、index.jspが返却されること
@@ -86,8 +85,8 @@ class GwaWebControllerTest {
 		// mockMvcでのテスト実行
 		// 条件が満たされない場合、テストNGでエラーとなる
 		this.mockMvc
-				// Getで"/404"が実行された場合
-				.perform(MockMvcRequestBuilders.get("/404"))
+				// Postで"/404"が実行された場合
+				.perform(MockMvcRequestBuilders.post("/404"))
 				// 実行結果のHTTPステータスコードが404であること
 				.andExpect(status().isNotFound());
 	}

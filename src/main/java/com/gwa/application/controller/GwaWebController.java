@@ -22,11 +22,11 @@ public class GwaWebController {
 	 * 4. Springの起動が終わるのを待つ<br>
 	 * 5. 以下のURLに@RequestMappingに指定したURLを追加してアクセスする<br>
 	 * URL: http://localhost:8080
-	 * 
+	 *
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.POST)
 	public ModelAndView index(ModelAndView modelAndView) {
 
 		// Serviceクラスを呼び出す処理
