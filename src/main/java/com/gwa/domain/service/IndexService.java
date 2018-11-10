@@ -11,7 +11,7 @@ public class IndexService {
 	 * @return
 	 */
 	public String test() {
-		return "Hello Spring MVC!!!";
+		return "Hello Spring MVC!!";
 	}
 
 }
