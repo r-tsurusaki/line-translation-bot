@@ -1,2 +1,2 @@
-# gwa-api
-研修生用リポジトリ
+# api-sample
+SpringBootでjsonを編ん客するサンプルAPI
