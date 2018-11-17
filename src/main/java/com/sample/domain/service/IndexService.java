@@ -1,7 +1,7 @@
-package com.gwa.domain.service;
+package com.sample.domain.service;
 
-import com.gwa.application.resources.IndexEntity;
-import com.gwa.application.resources.IndexEntityData;
+import com.sample.application.resources.IndexEntity;
+import com.sample.application.resources.IndexEntityData;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;

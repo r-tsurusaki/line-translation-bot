@@ -1,4 +1,4 @@
-package com.gwa.application.resources;
+package com.sample.application.resources;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;

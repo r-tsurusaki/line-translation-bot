@@ -1,4 +1,4 @@
-package com.gwa.application.config;
+package com.sample.application.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;

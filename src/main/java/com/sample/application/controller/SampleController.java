@@ -1,7 +1,7 @@
-package com.gwa.application.controller;
+package com.sample.application.controller;
 
-import com.gwa.application.resources.IndexEntity;
-import com.gwa.domain.service.IndexService;
+import com.sample.application.resources.IndexEntity;
+import com.sample.domain.service.IndexService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @ApiModel(description = "サンプルコントローラ")
 @RestController
 @ResponseBody
-public class GwaWebController {
+public class SampleController {
 
     @Autowired
     private IndexService indexService;

@@ -1,4 +1,4 @@
-package com.gwa.application.config;
+package com.sample.application.config;
 
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -26,7 +26,7 @@ public class Swagger2Config {
     public Docket document() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.gwa"))
+                .apis(RequestHandlerSelectors.basePackage("com.sample"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());

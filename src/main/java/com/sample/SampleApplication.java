@@ -1,4 +1,4 @@
-package com.gwa;
+package com.sample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan
 @SpringBootApplication
-public class GwaApplication {
+public class SampleApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GwaApplication.class, args);
+		SpringApplication.run(SampleApplication.class, args);
 
 	}
 }
