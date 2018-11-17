@@ -1,2 +1,2 @@
 # api-sample
-SpringBootでjsonを返却するサンプルAPI
+Spring Bootでjsonを返却するサンプルAPI
