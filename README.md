@@ -1,2 +1,2 @@
 # api-sample
-SpringBootでjsonを編ん客するサンプルAPI
+Spring Bootでjsonを返却するサンプルAPI
