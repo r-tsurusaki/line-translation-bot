@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Data
 @Builder
-public class IndexEntityData {
+public class TranslationEntityData {
 
     @JsonProperty("Num")
     private int num;

@@ -1,6 +1,5 @@
-swagger:
-  title: LINEメッセージ翻訳Bot
-  description: |
-    【作成中】
-    LINEメッセージを受け取り、「Microsoft Translator テキストAPI」で翻訳して返信する。
-  version: 0.01
+line:
+  bot:
+    channel-token: 50n3++U/8T5Fzhc3VOI7RsZAOltRDwXrqPW6FVE56NGTJYW/8vlBbeK4kv1ICqhPsSIzdOZb+A4CXqYkpOMMCXHPJIXjC+f+xknrGBkPZUjKy79z9OFyDOZg02KfWAewOz6o4dzs4C4fGSD/LJUUrAdB04t89/1O/w1cDnyilFU=
+    channel-secret: 814e1c75b5a9c04e1a64d42f8aeae3b1
+    handler.path: /callback
