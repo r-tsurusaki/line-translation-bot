@@ -1,35 +1,40 @@
 package com.lineTranslationBot.application.controller;
 
-import com.lineTranslationBot.application.resources.IndexEntity;
-import com.lineTranslationBot.domain.service.IndexService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiOperation;
+import com.lineTranslationBot.domain.service.LineService;
+import com.linecorp.bot.model.event.Event;
+import com.linecorp.bot.model.event.MessageEvent;
+import com.linecorp.bot.model.event.message.TextMessageContent;
+import com.linecorp.bot.model.message.TextMessage;
+import com.linecorp.bot.spring.boot.annotation.EventMapping;
+import com.linecorp.bot.spring.boot.annotation.LineMessageHandler;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
-@Api(tags = "サンプルAPI")
-@ApiModel(description = "サンプルコントローラ")
-@RestController
-@ResponseBody
+@LineMessageHandler
 public class LineTranslationBotController {
 
+    // LINEのサービスクラス
     @Autowired
-    private IndexService indexService;
+    LineService lineService;
 
     /**
-     * ほげ情報json返却
+     * テキストメッセージのhandler
+     *
+     * @param event event
+     * @return 返信メッセージ
      */
-    @ApiOperation("サンプルjson返却")
-    @RequestMapping(value = "/", method = {RequestMethod.GET})
-    public ResponseEntity<IndexEntity> Index() {
+    @EventMapping
+    public TextMessage handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
+        System.out.println("event: " + event);
+        return new TextMessage(event.getMessage().getText());
+    }
 
-        IndexEntity indexEntity = this.indexService.getEntity();
-
-        return ResponseEntity.ok(indexEntity);
+    /**
+     * overrideしていないメソッドのhandler
+     *
+     * @param event event
+     */
+    @EventMapping
+    public void handleDefaultMessageEvent(Event event) {
+        System.out.println("event: " + event);
     }
 }

@@ -6,13 +6,13 @@ import lombok.Data;
 
 @Data
 @Builder
-public class IndexEntity {
+public class TranslationEntity {
 
     @JsonProperty("Status")
     private String status;
 
     @JsonProperty("Data")
-    IndexEntityData data;
+    TranslationEntityData data;
 
     @JsonProperty("Message")
     private String message;
