@@ -1,4 +1,4 @@
-package com.sample.domain.service;
+package com.lineTranslationBot.domain.service;
 
 import org.junit.jupiter.api.Test;
 

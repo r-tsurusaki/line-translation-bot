@@ -1,6 +1,7 @@
-package com.sample.application.config;
+package com.lineTranslationBot.application.config;
 
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,7 +27,7 @@ public class Swagger2Config {
     public Docket document() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.sample"))
+                .apis(RequestHandlerSelectors.basePackage("com.lineTranslationBot"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());

@@ -1,7 +1,7 @@
-package com.sample.domain.service;
+package com.lineTranslationBot.domain.service;
 
-import com.sample.application.resources.IndexEntity;
-import com.sample.application.resources.IndexEntityData;
+import com.lineTranslationBot.application.resources.IndexEntity;
+import com.lineTranslationBot.application.resources.IndexEntityData;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
