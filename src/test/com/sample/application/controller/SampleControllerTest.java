@@ -1,4 +1,4 @@
-package com.sample.application.controller;
+package com.lineTranslationBot.application.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;

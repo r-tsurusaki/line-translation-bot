@@ -5,11 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.gwa</groupId>
-	<artifactId>gwa-api</artifactId>
+	<artifactId>line-translation-bot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>gwa-api</name>
+	<name>line-translation-bot</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>

@@ -1,7 +1,7 @@
-package com.sample.application.controller;
+package com.lineTranslationBot.application.controller;
 
-import com.sample.application.resources.IndexEntity;
-import com.sample.domain.service.IndexService;
+import com.lineTranslationBot.application.resources.IndexEntity;
+import com.lineTranslationBot.domain.service.IndexService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @ApiModel(description = "サンプルコントローラ")
 @RestController
 @ResponseBody
-public class SampleController {
+public class LineTranslationBotController {
 
     @Autowired
     private IndexService indexService;

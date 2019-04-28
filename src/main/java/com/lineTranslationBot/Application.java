@@ -1,4 +1,4 @@
-package com.sample;
+package com.lineTranslationBot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,9 @@ import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan
 @SpringBootApplication
-public class SampleApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SampleApplication.class, args);
-
+		SpringApplication.run(Application.class, args);
 	}
 }

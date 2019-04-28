@@ -1,4 +1,4 @@
-package com.sample.application.resources;
+package com.lineTranslationBot.application.resources;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;

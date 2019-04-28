@@ -1,4 +1,6 @@
 swagger:
-  title: タイトル
-  description: 説明
+  title: LINEメッセージ翻訳Bot
+  description: |
+    【作成中】
+    LINEメッセージを受け取り、「Microsoft Translator テキストAPI」で翻訳して返信する。
   version: 0.01
