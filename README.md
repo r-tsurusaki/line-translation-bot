@@ -1,2 +1,2 @@
-# api-sample
-Spring Bootでjsonを返却するサンプルAPI
+# line-translation-bot
+LINEから送られてきたメッセージをそのまま返却するサンプルAPI

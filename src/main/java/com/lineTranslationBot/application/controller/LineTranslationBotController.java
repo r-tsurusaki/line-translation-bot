@@ -24,8 +24,12 @@ public class LineTranslationBotController {
      */
     @EventMapping
     public TextMessage handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
+
         System.out.println("event: " + event);
-        return new TextMessage(event.getMessage().getText());
+
+        String resultStr = this.lineService.echo(event.getMessage().getText());
+
+        return new TextMessage(resultStr);
     }
 
     /**
